@@ -24,7 +24,7 @@
     <!-- Contact Us Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <form action="submit_form.php" method="POST">
+        <form id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -36,6 +36,11 @@
 
             <button type="submit">Submit</button>
         </form>
+
+        <div id="success-message" class="hidden">
+            <p>Thank you for contacting us! We will get back to you soon.</p>
+        </div>
+
     </section>
 
     <!-- Footer with social media links -->
@@ -56,5 +61,8 @@
         </div>
         <p>&copy; 2025 My Portfolio</p>
     </footer>r
+
+    <script src="contact.js"></script>
+
 </body>
 </html>
