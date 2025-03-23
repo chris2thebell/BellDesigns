@@ -93,6 +93,151 @@ section h2 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Portfolio Section */
+.portfolio-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Group Images in Sets of Three */
+.image-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Lightbox - Initially Hidden */
+/* Lightbox Styling */
+/* Project Hover Effect */
+.project {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Hover Animation */
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+/* Lightbox Active */
+#lightbox.active {
+    display: flex;
+}
+
+/* Lightbox Image */
+#lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Close Button */
+#close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+/* Navigation Buttons */
+#prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#prev-btn {
+    left: 20px;
+}
+
+#next-btn {
+    right: 20px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Hide Lightbox by Default */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .thumbnail {
+        width: 200px;
+        height: 140px;
+    }
+
+    #lightbox img {
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* About Section */
 #about p {
     font-size: 1.2rem;
@@ -141,6 +286,46 @@ form button:hover {
     background-color: #0051a8; /* Darker blue */
 }
 
+.map-container {
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#location h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#location p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+#location a {
+    color: #007aff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#location a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Footer Styling */
 footer {
     background-color: #f9f9f9;
@@ -151,21 +336,32 @@ footer {
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
-footer .social-media a {
+/* Social Media Icons */
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
     text-decoration: none;
     color: #333;
     margin: 0 15px;
     font-size: 1.5rem; /* Adjust icon size */
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-footer .social-media a:hover {
+/* Hover Effect */
+.social-media a:hover {
     color: #007aff; /* Apple blue */
+    transform: scale(1.1);
 }
 
-footer .social-media i {
-    font-size: 1.8rem; /* Adjust icon size */
+/* Copyright Text */
+footer p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

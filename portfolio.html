@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
-        <!-- Add Font Awesome CDN -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
 <body>
-    <!-- Header with navigation links -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>My Portfolio</h2>
-        <div class="portfolio-gallery">
-            <!-- Portfolio items (images) -->
-            <div class="portfolio-item">
-                <img src="image1.jpg" alt="Portfolio Item 1">
-                <p>Project 1 Description</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="image2.jpg" alt="Portfolio Item 2">
-                <p>Project 2 Description</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="image3.jpg" alt="Portfolio Item 3">
-                <p>Project 3 Description</p>
-            </div>
-            <!-- Add more portfolio items as needed -->
-        </div>
-    </section>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Footer with social media links -->
-    <footer>
-        <div class="social-media">
-            <a href="https://facebook.com" target="_blank">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
+<!-- Portfolio Section -->
+<section id="portfolio">
+    <h2>Recent Work</h2>
+    <div class="portfolio-gallery">
+        <!-- Project 1 -->
+        <div class="project" data-images="assets/project1-F.jpg,assets/project1-E.jpg">
+            <img class="project-thumbnail" src="assets/project1-F.jpg" alt="Project 1">
+            <p>Floor and Electrical plans for rec. area, office and guest room in basement.</p>
         </div>
-        <p>&copy; 2025 My Portfolio</p>
-    </footer>
+
+        <!-- Project 2 -->
+        <div class="project" data-images="assets/project2-F.jpg,assets/project2-E.jpg,assets/project2-F.jpg,assets/project2-render.jpg,assets/project2-3d.jpg">
+            <img class="project-thumbnail" src="assets/project2-F.jpg" alt="Project 2">
+            <p>Floor, Electrical, and Lighting plans for future basement ADU. Renderings Included for reference.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project" data-images="assets/project3-render.jpg,assets/project3-3d.jpg">
+            <img class="project-thumbnail" src="assets/project3-render.jpg" alt="Project 3">
+            <p>Basement ADU rendering of Kitchen/Living room and 3D perspective.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="hidden">
+    <span id="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Expanded View">
+    <button id="prev-btn">&#10094;</button>
+    <button id="next-btn">&#10095;</button>
+</div>
+
+<footer>
+    <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=61572277568673" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/belldesignsutah/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://g.co/kgs/Rza8aix" target="_blank"><i class="fab fa-google"></i></a>
+    </div>
+    <p>&copy; 2025 My Portfolio</p>
+</footer>    
+
+
+<script src="script.js"></script> <!-- JavaScript for interactive effects -->
 </body>
 </html>
