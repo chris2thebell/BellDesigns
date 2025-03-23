@@ -1,40 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS for styling -->
-        <!-- Add Font Awesome CDN -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bell Designs | Drafting Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
 <body>
-    <!-- Header with navigation links -->
+    <!-- Header with navigation -->
     <header>
         <nav>
-            <ul>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="Bell Designs Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About Me</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section>
-        <h2>Welcome to My Portfolio</h2>
-        <p>Explore my work, learn more about me, or get in touch with me!</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Professional Drafting Services</h1>
+        <p>Precision drafting solutions for residential & commercial projects.</p>
+        <a href="contact.html" class="btn">Get a Quote</a>
     </section>
 
-    <!-- Footer with social media links -->
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service">
+                <i class="fas fa-home"></i>
+                <h3>Residential Drafting</h3>
+                <p>Detailed blueprints for homes, renovations, and additions.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-building"></i>
+                <h3>Commercial Drafting</h3>
+                <p>Accurate plans for offices, retail spaces, and industrial buildings.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>3D Rendering</h3>
+                <p>Realistic 3D models and visualizations for your projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <h2>Why Choose Bell Designs?</h2>
+        <ul>
+            <li><i class="fas fa-check-circle"></i> Over 10 Years of Experience</li>
+            <li><i class="fas fa-check-circle"></i> Quick Turnaround & Affordable Rates</li>
+            <li><i class="fas fa-check-circle"></i> Precision & Attention to Detail</li>
+            <li><i class="fas fa-check-circle"></i> Fully Customizable Drafting Solutions</li>
+        </ul>
+    </section>
+
+    <!-- Recent Projects -->
+    <section class="recent-projects">
+        <h2>Recent Projects</h2>
+        <div class="project-gallery">
+            <img src="assets/project1.jpg" alt="Project 1">
+            <img src="assets/project2.jpg" alt="Project 2">
+            <img src="assets/project3.jpg" alt="Project 3">
+        </div>
+        <a href="portfolio.html" class="btn">View More</a>
+    </section>
+
+<!-- FAQ Section -->
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>What services do you offer?</h3>
+            <p>We provide drafting services including architectural plans, 3D modeling, and construction documentation.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How long does a project take?</h3>
+            <p>Project timelines vary depending on complexity, but we typically complete drafts within 1-3 weeks.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you provide revisions?</h3>
+            <p>Yes! We include a set number of revisions to ensure client satisfaction.</p>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial active">
+            <p>"Bell Designs delivered exactly what we needed. The drafting was precise, professional, and timely!"</p>
+            <div class="testimonial-author">- John Doe, Homeowner</div>
+        </div>
+        <div class="testimonial">
+            <p>"Fantastic work! They took our vision and turned it into reality with detailed and accurate plans."</p>
+            <div class="testimonial-author">- Sarah Johnson, Architect</div>
+        </div>
+        <div class="testimonial">
+            <p>"Highly recommend Bell Designs for any drafting project. Their attention to detail is unmatched."</p>
+            <div class="testimonial-author">- Mark Stevens, Contractor</div>
+        </div>
+    </div>
+    <div class="testimonial-buttons">
+        <button id="prev-testimonial">❮</button>
+        <button id="next-testimonial">❯</button>
+    </div>
+    <div class="testimonial-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Contact us today to discuss your drafting needs and get a free quote!</p>
+        <a href="contact.html" class="btn">Request a Quote</a>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="social-media">
-            <a href="https://www.facebook.com/profile.php?id=61572277568673" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/belldesignsutah/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://g.co/kgs/Rza8aix" target="_blank"><i class="fab fa-google"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61572277568673" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/belldesignsutah/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://g.co/kgs/Rza8aix" target="_blank" aria-label="Google"><i class="fa-brands fa-google"></i></a>
         </div>
-        <p>&copy; 2025 My Portfolio</p>
-    </footer>      
+        <p>&copy; 2025 Bell Designs | All Rights Reserved</p>
+    </footer>
+    
+    <script src="homeScript.js"></script>
 </body>
 </html>
