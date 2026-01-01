@@ -1,3 +1,4 @@
+// Testimonials Carousel
 document.addEventListener("DOMContentLoaded", function () {
     const testimonials = document.querySelectorAll(".testimonial");
     const dots = document.querySelectorAll(".dot");
@@ -6,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function showTestimonial(index) {
         testimonials.forEach((testimonial, i) => {
             testimonial.classList.toggle("active", i === index);
-            dots[i].classList.toggle("active", i === index);
+        });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
         });
     }
 

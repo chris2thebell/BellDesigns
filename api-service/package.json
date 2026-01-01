@@ -1,0 +1,21 @@
+{
+  "name": "belldesigns-google-reviews-api",
+  "version": "1.0.0",
+  "description": "Standalone API service for fetching Google Reviews",
+  "main": "api/google-reviews.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "google-reviews",
+    "api",
+    "vercel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.x"
+  }
+}
+

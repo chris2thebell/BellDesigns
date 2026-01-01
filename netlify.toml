@@ -1,0 +1,11 @@
+# Netlify configuration for Google Reviews function
+
+[build]
+  functions = "netlify/functions"
+
+# Redirect API calls to Netlify functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+

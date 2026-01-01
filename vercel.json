@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/google-reviews.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "env": {
+    "GOOGLE_PLACES_API_KEY": "@google-places-api-key"
+  }
+}
+
