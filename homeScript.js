@@ -39,13 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     faqItems.forEach((item) => {
         item.addEventListener("click", function () {
             const answer = this.querySelector("p");
-
-            // Toggle the visibility
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-            } else {
-                answer.style.display = "block";
-            }
+            const open = answer.style.display === "block";
+            answer.style.display = open ? "none" : "block";
+            this.classList.toggle("open", !open);
         });
     });
 });
