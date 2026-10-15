@@ -13,12 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    document.getElementById("prev-testimonial").addEventListener("click", function () {
+    const prevButton = document.getElementById("prev-testimonial");
+    const nextButton = document.getElementById("next-testimonial");
+    if (!prevButton || !nextButton) {
+        return;
+    }
+
+    prevButton.addEventListener("click", function () {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonials.length - 1;
         showTestimonial(currentIndex);
     });
 
-    document.getElementById("next-testimonial").addEventListener("click", function () {
+    nextButton.addEventListener("click", function () {
         currentIndex = (currentIndex < testimonials.length - 1) ? currentIndex + 1 : 0;
         showTestimonial(currentIndex);
     });

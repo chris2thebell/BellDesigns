@@ -1,6 +1,14 @@
 // Posts JSON (text/plain, so Google Apps Script skips a CORS preflight).
 // Files are base64. Redeploy steps: CONTACT_FORM_SETUP.md
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyO7gDrsAwO265p3rIMneCglMc-9O7GbAPFjneSVvDWvPMVOuoiQJptZTKVzjQRqZlF/exec";
+
+const projectParam = new URLSearchParams(window.location.search).get("project");
+if (projectParam === "3d-scan") {
+    const projectType = document.getElementById("projectType");
+    if (projectType) {
+        projectType.value = "3D scan";
+    }
+}
 const MAX_FILES = 4;
 const MAX_TOTAL_BYTES = 8 * 1024 * 1024;
 
