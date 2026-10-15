@@ -1767,6 +1767,37 @@ footer .license-line {
     margin-top: 12px;
 }
 
+a.service.audience-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+a.service.audience-card .card-cue {
+    color: #007aff;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+a.service.audience-card .card-cue::after {
+    content: " \2192";
+}
+
+a.service.audience-card:hover,
+a.service.audience-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 122, 255, 0.15);
+    border-color: #007aff;
+    outline: 3px solid #007aff;
+    outline-offset: 3px;
+}
+
+a.service.audience-card:hover .card-cue,
+a.service.audience-card:focus-visible .card-cue {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     .nav-links.active {
         max-height: 520px;
