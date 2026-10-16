@@ -686,6 +686,12 @@ nav a:hover {
     max-width: 100%;
 }
 
+.project-item,
+.project-item * {
+    text-decoration: none;
+    color: inherit;
+}
+
 .project-item {
     position: relative;
     overflow: hidden;
@@ -1618,12 +1624,14 @@ a.btn {
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 a.btn:hover {
     background-color: #0056b3;
     color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .center {
@@ -1647,6 +1655,18 @@ a.btn:hover {
 .service li {
     margin: 8px 0;
     line-height: 1.5;
+}
+
+.service p a,
+.intro-copy a {
+    color: #007aff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.service p a:hover,
+.intro-copy a:hover {
+    text-decoration: underline;
 }
 
 .pair-gallery {
@@ -1773,17 +1793,34 @@ footer .license-line {
     margin-top: 12px;
 }
 
-a.service.audience-card {
-    display: block;
+a.service.audience-card,
+a.service.audience-card * {
     text-decoration: none;
     color: inherit;
+}
+
+a.service.audience-card {
+    display: block;
     cursor: pointer;
+}
+
+a.service.audience-card h3 {
+    color: #1a1a1a;
+}
+
+a.service.audience-card p {
+    color: #666;
+}
+
+a.service.audience-card i {
+    color: #007aff;
 }
 
 a.service.audience-card .card-cue {
     color: #007aff;
     font-weight: 600;
     margin-top: 16px;
+    text-decoration: none;
 }
 
 a.service.audience-card .card-cue::after {
@@ -1802,6 +1839,55 @@ a.service.audience-card:focus-visible {
 a.service.audience-card:hover .card-cue,
 a.service.audience-card:focus-visible .card-cue {
     text-decoration: underline;
+}
+
+/* Six links plus the original logo width do not fit the row below 1240px. */
+@media (max-width: 1240px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        padding: 0;
+        margin-top: 12px;
+    }
+
+    .nav-links.active {
+        max-height: 520px;
+        padding: 20px 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:active {
+        background-color: #f8f9fa;
+        color: #007aff;
+    }
 }
 
 @media (max-width: 768px) {
