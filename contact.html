@@ -105,82 +105,18 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <form id="contact-form">
-            <div class="field">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" autocomplete="name" required>
-            </div>
-            <div class="field">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel" required>
-            </div>
-            <fieldset class="role-fieldset">
-                <legend>I am a:</legend>
-                <div class="role-options">
-                    <label class="role-option">
-                        <input type="radio" name="role" value="Contractor" required>
-                        <span>Contractor</span>
-                    </label>
-                    <label class="role-option">
-                        <input type="radio" name="role" value="Homeowner">
-                        <span>Homeowner</span>
-                    </label>
-                </div>
-            </fieldset>
-            <div class="field">
-                <label for="projectType">Project type:</label>
-                <select id="projectType" name="projectType" required>
-                    <option value="">Select a project type</option>
-                    <option>Basement permit set</option>
-                    <option>Remodel or addition</option>
-                    <option>ADU</option>
-                    <option>As-built</option>
-                    <option>3D scan</option>
-                    <option>3D rendering</option>
-                    <option>Contractor retainer</option>
-                    <option>General contracting</option>
-                    <option>Other</option>
-                </select>
-            </div>
-            <div class="field">
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" list="utah-cities" autocomplete="address-level2" required>
-                <datalist id="utah-cities">
-                    <option value="Eagle Mountain"></option>
-                    <option value="Saratoga Springs"></option>
-                    <option value="Lehi"></option>
-                    <option value="American Fork"></option>
-                    <option value="Cedar Hills"></option>
-                    <option value="Highland"></option>
-                    <option value="Alpine"></option>
-                    <option value="Pleasant Grove"></option>
-                    <option value="Lindon"></option>
-                    <option value="Orem"></option>
-                    <option value="Provo"></option>
-                    <option value="Spanish Fork"></option>
-                    <option value="Springville"></option>
-                    <option value="Payson"></option>
-                    <option value="Herriman"></option>
-                    <option value="South Jordan"></option>
-                    <option value="Riverton"></option>
-                    <option value="Bluffdale"></option>
-                    <option value="Draper"></option>
-                    <option value="Salt Lake City"></option>
-                    <option value="West Jordan"></option>
-                </datalist>
-            </div>
-            <div class="field">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <div class="field">
-                <label for="files">Plans, photos, or a scan export:</label>
-                <input type="file" id="files" name="files" multiple accept=".pdf,.png,.jpg,.jpeg,.webp,.heic,.zip,.dwg,.dxf,application/pdf,image/*">
-                <p class="field-hint">Optional. Up to 4 files, 8 MB total. PDF, images, ZIP, DWG, or DXF.</p>
-            </div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
             <button type="submit">Submit</button>
         </form>
 
