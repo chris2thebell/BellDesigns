@@ -1788,11 +1788,6 @@ form input[type="file"]:focus {
     font-weight: 700;
 }
 
-footer .license-line {
-    color: #cccccc;
-    margin-top: 12px;
-}
-
 a.service.audience-card,
 a.service.audience-card * {
     text-decoration: none;
