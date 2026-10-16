@@ -1841,8 +1841,8 @@ a.service.audience-card:focus-visible .card-cue {
     text-decoration: underline;
 }
 
-/* Six links plus the original logo width do not fit the row below 1240px. */
-@media (max-width: 1240px) {
+/* The row of six links does not fit beside the logo below 1000px. */
+@media (max-width: 1000px) {
     .mobile-menu-toggle {
         display: flex;
     }
@@ -1901,5 +1901,20 @@ a.service.audience-card:focus-visible .card-cue {
 
     .banner-actions .btn {
         width: 100%;
+    }
+}
+
+/* The logo file has no empty padding, so the old 150px box made the bar huge. */
+.logo a {
+    padding: 0;
+}
+
+.logo img {
+    height: 48px;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px;
     }
 }
