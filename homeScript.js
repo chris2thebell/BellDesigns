@@ -13,12 +13,18 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    document.getElementById("prev-testimonial").addEventListener("click", function () {
+    const prevButton = document.getElementById("prev-testimonial");
+    const nextButton = document.getElementById("next-testimonial");
+    if (!prevButton || !nextButton) {
+        return;
+    }
+
+    prevButton.addEventListener("click", function () {
         currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonials.length - 1;
         showTestimonial(currentIndex);
     });
 
-    document.getElementById("next-testimonial").addEventListener("click", function () {
+    nextButton.addEventListener("click", function () {
         currentIndex = (currentIndex < testimonials.length - 1) ? currentIndex + 1 : 0;
         showTestimonial(currentIndex);
     });
@@ -39,13 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
     faqItems.forEach((item) => {
         item.addEventListener("click", function () {
             const answer = this.querySelector("p");
-
-            // Toggle the visibility
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-            } else {
-                answer.style.display = "block";
-            }
+            const open = answer.style.display === "block";
+            answer.style.display = open ? "none" : "block";
+            this.classList.toggle("open", !open);
         });
     });
 });
